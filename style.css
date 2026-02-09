@@ -113,16 +113,17 @@ input[type="radio"] {
     color: #667eea;
     margin-bottom: 10px;
 }
-footer {
-    text-align: center;
-    margin-top: 30px;
-    color: #999;
-    font-size: 0.9em;
-}
+
 .description {
     color: #666;
     line-height: 1.6;
     font-size: 1em;
+}
+footer {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 30px;
+    color: #999;
 }
 h1 {
     color: #333;
