@@ -65,3 +65,24 @@ input[type="radio"] {
     margin-right: 8px;
     cursor: pointer;
 }
+.submit-btn {
+    width: 100%;
+    color: rgb(239, 236, 236);
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%,  #764ba2 100%  );
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
