@@ -25,12 +25,7 @@ form.addEventListener('submit', function(event) {
     
     displayResult(akanName, daysOfWeek[dayIndex]);
 });
- @param {number} day 
- @param {number} month 
- @param {number} year 
- @param {string} gender 
- @returns {boolean} 
- 
+
 function validateInput(day, month, year, gender) {
     // Check if gender is selected
     if (!gender) {
@@ -66,12 +61,11 @@ function validateInput(day, month, year, gender) {
             return false;
         }
     }
-    
-    // Check if year is reasonable
+        
     if (year < 1900 || year > new Date().getFullYear()) {
         alert('Please enter a valid year.');
         return false;
     }
     
-    return true; // All validations passed
+    return true; // if validations ni correct
 }
