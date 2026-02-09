@@ -55,10 +55,10 @@ input[type="number"]:focus {
 }
 
 .radio-group label {
-    display: flex;
-    align-items: center;
     font-weight: normal;
+    align-items: center;
     cursor: pointer;
+    display: flex;
 }
 
 input[type="radio"] {
@@ -85,4 +85,18 @@ input[type="radio"] {
 
 .submit-btn:active {
     transform: translateY(0);
+}
+.result {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 10px;
+    animation: slideIn 0.5s ease-out;
+    margin-top: 30px;
+}
+
+.result h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5em;
 }
