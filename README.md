@@ -70,6 +70,11 @@ Name: Asher
 
 GitHub: https://github.com/Ashtop13-maker
 
+8. License
 
+This project is available under the MIT License.
+
+Short license summary: You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software. The project is provided "as is", without warranty of any kind.  
+9. Copyright
 
 © 2026 Asher. All rights reserved.
