@@ -70,24 +70,33 @@ function validateInput(day, month, year, gender) {
     return true; // if validations ni correct
 }
 function calculateDayOfWeek(day, month, year) {
-    const CC = Math.floor(year / 100); 
-    const YY = year % 100;              
-    const MM = month;
-    const DD = day;
-    
-    const part1 = Math.floor(CC / 4) - 2 * CC - 1;
-    const part2 = Math.floor((5 * YY) / 4);
-    const part3 = Math.floor((26 * (MM + 1)) / 10);
-    const part4 = DD;
-    
-    let dayIndex = (part1 + part2 + part3 + part4) % 7;
-    
-    if (dayIndex < 0) {
-        dayIndex += 7;
+    let q = day;
+    let m = month;
+    let Y = year;
+
+    if (m === 1 || m === 2) {
+        m += 12;
+        Y -= 1;
     }
+
+    let K = Y % 100;              
+    let J = Math.floor(Y / 100);  
+
     
-    return dayIndex;
+    let h = (q
+        + Math.floor((13 * (m + 1)) / 5)
+        + K
+        + Math.floor(K / 4)
+        + Math.floor(J / 4)
+        + (5 * J)
+    ) % 7;
+
+    let dayIndex = (h + 6) % 7;
+
+    return dayIndex; 
 }
+
+
 function getAkanName(dayIndex, gender) {
     if (gender === 'male') {
         return maleNames[dayIndex];
