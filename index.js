@@ -95,3 +95,8 @@ function getAkanName(dayIndex, gender) {
         return femaleNames[dayIndex];
     }
 }
+function displayResult(name, day) {
+    akanNameDisplay.textContent = name;
+    dayOfWeekDisplay.textContent = `You were born on a ${day}!`;
+    resultDiv.classList.remove('hidden');
+}
