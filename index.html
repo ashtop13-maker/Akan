@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akan Name Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Akan Name Generator</h1>
+            <p class="description">
+                Discover your Akan name! In Ghanaian culture, children are named based on 
+                the day of the week they were born. Enter your birthdate below to find yours.
+            </p>
+        </header>
+
+        <main>
+            <form id="akanForm">
+                <div class="form-group">
+                    <label for="day">Day:</label>
+                    <input type="number" id="day" name="day" min="1" max="31" placeholder="DD" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="month">Month:</label>
+                    <input type="number" id="month" name="month" min="1" max="12" placeholder="MM" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="number" id="year" name="year" min="1900" max="2026" placeholder="YYYY" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="male" required>
+                            Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" required>
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Discover My Akan Name</button>
+            </form>
+
+            <div id="result" class="result hidden">
+                <h2>Your Akan Name is:</h2>
+                <p id="akanName" class="akan-name"></p>
+                <p id="dayOfWeek" class="day-info"></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Akan Name Generator</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
