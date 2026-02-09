@@ -25,3 +25,53 @@ form.addEventListener('submit', function(event) {
     
     displayResult(akanName, daysOfWeek[dayIndex]);
 });
+ @param {number} day 
+ @param {number} month 
+ @param {number} year 
+ @param {string} gender 
+ @returns {boolean} 
+ 
+function validateInput(day, month, year, gender) {
+    // Check if gender is selected
+    if (!gender) {
+        alert('Please select a gender.');
+        return false;
+    }
+    
+    // Check if month is valid (1-12)
+    if (month < 1 || month > 12) {
+        alert('Invalid month! Please enter a month between 1 and 12.');
+        return false;
+    }
+    
+    // Check if day is valid (1-31)
+    if (day < 1 || day > 31) {
+        alert('Invalid day! Please enter a day between 1 and 31.');
+        return false;
+    }
+    
+    // Check for months with only 30 days
+    if ((month === 4 || month === 6 || month === 9 || month === 11) && day > 30) {
+        alert('This month only has 30 days!');
+        return false;
+    }
+    
+    // Check for February (considering leap years)
+    if (month === 2) {
+        const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+        const maxDays = isLeapYear ? 29 : 28;
+        
+        if (day > maxDays) {
+            alert(`February ${year} only has ${maxDays} days!`);
+            return false;
+        }
+    }
+    
+    // Check if year is reasonable
+    if (year < 1900 || year > new Date().getFullYear()) {
+        alert('Please enter a valid year.');
+        return false;
+    }
+    
+    return true; // All validations passed
+}
