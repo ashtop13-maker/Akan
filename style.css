@@ -55,9 +55,9 @@ input[type="number"]:focus {
 }
 
 .radio-group label {
+    cursor: pointer;
     font-weight: normal;
     align-items: center;
-    cursor: pointer;
     display: flex;
 }
 
